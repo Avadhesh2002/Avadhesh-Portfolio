@@ -3,6 +3,7 @@ Project Overview
 This project is a personal portfolio website for Avadhesh, showcasing his skills, projects, and contact information. The portfolio is designed to be clean, responsive, and easy to navigate.
 
 Project Structure
+
 The project consists of the following files and directories:
 
 assets: Contains all the static files such as images, icons, and other resources used in the project.
