@@ -3,28 +3,23 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <title>Avadhesh Ram Tripathi - Portfolio</title>
+  <title>Avadhesh Ram Tripathi</title>
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
   <link rel="stylesheet" href="style.css">
   <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
-  <!-- Background Video -->
   <video autoplay loop muted plays-inline class="back-vid">
     <source src="assets/galaxy.mp4" type="video/mp4">
-    Your browser does not support the video tag.
   </video>
-
-  <!-- Main Section -->
   <section class="main-section">
-    <!-- Navigation Bar -->
     <nav>
       <h1 data-aos="zoom-in" data-aos-duration="1000"><span style="color: #4acfee;">ART</span>Avadhesh</h1>
-      <!-- Hamburger Menu Icon -->
-      <input type="checkbox" id="menu-toggle">
-      <label for="menu-toggle" class="menu-icon">&#9776;</label>
-      <!-- Navigation Links -->
+      <div class="hamburger" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
       <ul class="nav-links">
         <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a class="active" href="index.html">Home</a></li>
         <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="about.html">About</a></li>
@@ -34,28 +29,27 @@
       </ul>
     </nav>
 
-    <!-- Hero Section -->
     <div class="hero">
       <div class="hero-info">
         <h1 data-aos="fade-right" data-aos-duration="1000" data-aos-delay="700">Hi, I'm Avadhesh Ram Tripathi</h1>
         <h2 data-aos="fade-left" data-aos-duration="1000" data-aos-delay="900">Fresher</h2>
         <p data-aos="flip-down" data-aos-duration="1000" data-aos-delay="1000">"Passionate Computer Science graduate with a strong foundation in programming, problem-solving, and software development. Eager to apply technical skills and learn new technologies in a dynamic environment."</p>
         <div class="Buttons">
-          <button class="btn" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="1100" onclick="window.location.href='mailto:avadhesh02022002@gmail.com'">Hire Me</button>
+          <button class="btn" data-aos="zoom-in-right" data-aos-duration="1000" data-aos-delay="1100" onclick="window.location.href='mailto:avadhesh02022002@gmail.com'">Hire Me</button> 
           <ul class="ul-icons">
             <li><a href="https://github.com/Avadhesh2002" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1200"><i class='bx bxl-github'></i></a></li>
-            <li><a href="https://leetcode.com/u/nPWskYute1/" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1300"><i class='bx bx-code-alt'></i></a></li>
+            <li><a href="https://leetcode.com/u/nPWskYute1/" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1300"><i class='bx bx-code-alt'></i> </a></li>
             <li><a href="https://www.linkedin.com/in/avadhesh-ram-tripathi-948a3b293/" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1500"><i class='bx bxl-linkedin'></i></a></li>
             <li><a href="https://wa.me/qr/FB3P3WPHQ5YEH1" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="1400"><i class='bx bxl-whatsapp'></i></a></li>
           </ul>
         </div>
       </div>
+
       <div class="hero-img" data-aos="zoom-in-left" data-aos-duration="2500">
-        <img src="assets/avadhesh image.png" alt="Avadhesh Ram Tripathi">
+        <img src="assets/avadhesh image.png" alt="person-img">
       </div>
     </div>
 
-    <!-- Info Section -->
     <div class="info-sec">
       <div class="info-card" data-aos="fade-in" data-aos-duration="1000" data-aos-delay="1600">
         <h1>0-1</h1>
@@ -71,11 +65,15 @@
       </div>
     </div>
   </section>
-
-  <!-- AOS Script -->
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
+
+    // Hamburger Menu Toggle
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('active');
+    }
   </script>
 </body>
 </html>
