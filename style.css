@@ -72,25 +72,51 @@ nav a:hover,
     text-decoration: underline;
 }
 
-/* Hamburger Menu */
+/* Hamburger Menu Styles */
 .hamburger {
     display: none; /* Hidden by default */
     font-size: 30px;
     cursor: pointer;
+    color: white; /* Change color to match the theme */
+    transition: transform 0.3s; /* Smooth transition for hover effect */
+}
+
+.hamburger:hover {
+    transform: scale(1.1); /* Slightly enlarge on hover */
 }
 
 /* Navigation Links */
-#nav-links {
+nav ul {
+    list-style: none;
     display: flex;
-    flex-direction: row;
+    transition: max-height 0.3s ease; /* Smooth transition for dropdown */
+    overflow: hidden; /* Hide overflow for animation */
+    max-height: 60px; /* Set max height for normal state */
+}
+
+#nav-links.active {
+    max-height: 300px; /* Set max height for expanded state */
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    font-size: 20px;
+    font-weight: bold;
+    transition: color 0.3s, transform 0.3s; /* Smooth transition for hover effect */
+    padding: 15px 20px; /* Increased padding for better click area */
+    border-radius: 5px; /* Rounded corners for links */
+}
+
+nav a:hover,
+.active {
+    background-color: rgba(74, 207, 238, 0.5); /* Add background on hover */
+    color: #0e1217; /* Change text color on hover */
+    transform: scale(1.05); /* Slightly enlarge on hover */
 }
 
 /* Responsive Styles */
 @media (max-width: 500px) {
-    .hamburger {
-        display: block; /* Show hamburger menu on smaller screens */
-    }
-
     #nav-links {
         display: none; /* Hide menu links by default */
         flex-direction: column; /* Stack links vertically */
@@ -100,16 +126,22 @@ nav a:hover,
         background-color: rgba(74, 207, 238, 0.9); /* Background color */
         width: 100%; /* Full width */
         z-index: 10; /* Ensure it appears above other content */
+        max-height: 0; /* Collapse by default */
+        overflow: hidden; /* Hide overflow for animation */
+        transition: max-height 0.3s ease; /* Smooth transition for dropdown */
     }
 
     #nav-links.active {
         display: flex; /* Show menu links when active */
+        max-height: 300px; /* Set max height for expanded state */
     }
 
     #nav-links li {
-        padding: 10px 0; /* Add padding to links */
+        padding: 10px 20px; /* Add padding to links for touch targets */
+        width: 100%; /* Full width for links */
     }
 }
+
 
 /* Hero Section */
 .hero {
