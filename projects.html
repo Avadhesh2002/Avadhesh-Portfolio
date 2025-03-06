@@ -4,8 +4,8 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Projects - Avadhesh Ram Tripathi</title>
-  <link rel="stylesheet" href="style.css"> <!-- Link to the CSS file -->
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" /> <!-- AOS CSS -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
   <video autoplay loop muted plays-inline class="back-vid">
@@ -14,7 +14,12 @@
   <section class="main-section">
     <nav>
       <h1 data-aos="zoom-in" data-aos-duration="1000"><span style="color: #4acfee;">ART</span>Avadhesh</h1>
-      <ul>
+      <div class="hamburger" onclick="toggleMenu()">
+        <div class="bar"></div>
+        <div class="bar"></div>
+        <div class="bar"></div>
+      </div>
+      <ul class="nav-links">
         <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100"><a href="index.html">Home</a></li>
         <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200"><a href="about.html">About</a></li>
         <li data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300"><a class="active" href="projects.html">Projects</a></li>
@@ -53,10 +58,15 @@
       </div>
     </div>
   </section>
-
   <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
   <script>
     AOS.init();
+
+    // Hamburger Menu Toggle
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('active');
+    }
   </script>
 </body>
 </html>
