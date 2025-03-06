@@ -1,18 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects - Avadhesh Ram Tripathi</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projects - Avadhesh Ram Tripathi</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
 <body>
-    <video autoplay loop muted plays-inline class="back-vid">
-        <source src="assets/galaxy.mp4" type="video/mp4">
-    </video>
-    <section class="main-section">
-         <nav>
+  <video autoplay loop muted plays-inline class="back-vid">
+    <source src="assets/galaxy.mp4" type="video/mp4">
+  </video>
+  <section class="main-section">
+    <nav>
       <h1 data-aos="zoom-in" data-aos-duration="1000"><span style="color: #4acfee;">ART</span>Avadhesh</h1>
       <div class="hamburger" onclick="toggleMenu()">
         <div class="bar"></div>
@@ -28,44 +28,45 @@
       </ul>
     </nav>
 
-        <div class="hero">
-            <div class="hero-info">
-                <h1>My Projects</h1>
-                <p>Here are some of the projects I've worked on:</p>
-            </div>
-        </div>
+    <div class="hero">
+      <div class="hero-info">
+        <h1>My Projects</h1>
+        <p>Here are some of the projects I've worked on:</p>
+      </div>
+    </div>
 
-        <div class="projects-container">
-            <div class="project-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
-                <h2>Project 1: Portfolio Website</h2>
-                <p>
-                    A personal portfolio website to showcase my skills, projects, and contact information. Built using HTML, CSS, and JavaScript.
-                </p>
-                <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript</p>
-                <a href="https://github.com/Avadhesh2002/Portfolio" target="_blank" class="project-link">View on GitHub</a>
-            </div>
+    <!-- Projects Section -->
+    <div class="projects-container">
+      <!-- Project 1 -->
+      <div class="project-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+        <h2>Project 1: Portfolio Website</h2>
+        <p>
+          A personal portfolio website to showcase my skills, projects, and contact information. Built using HTML, CSS, and JavaScript.
+        </p>
+        <p><strong>Technologies Used:</strong> HTML, CSS, JavaScript</p>
+        <a href="https://github.com/Avadhesh2002/Portfolio" target="_blank" class="project-link">View on GitHub</a>
+      </div>
 
-            <div class="project-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
-                <h2>Project 2: Login Page</h2>
-                <p>
-                    A fully functional e-commerce website with user authentication, product listings, and a shopping cart. Built using React.js and Firebase.
-                </p>
-                <p><strong>Technologies Used:</strong> React.js, Firebase, Tailwind CSS</p>
-                <a href="https://github.com/Avadhesh2002/E-Commerce" target="_blank" class="project-link">View on GitHub</a>
-            </div>
-        </div>
-    </section>
+      <!-- Project 2 -->
+      <div class="project-card" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+        <h2>Project 2: Login Page</h2>
+        <p>
+          A fully functional e-commerce website with user authentication, product listings, and a shopping cart. Built using React.js and Firebase.
+        </p>
+        <p><strong>Technologies Used:</strong> React.js, Firebase, Tailwind CSS</p>
+        <a href="https://github.com/Avadhesh2002/E-Commerce" target="_blank" class="project-link">View on GitHub</a>
+      </div>
+    </div>
+  </section>
+  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+  <script>
+    AOS.init();
 
-    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-    <script>
-        AOS.init();
-
-        const hamburger = document.getElementById('hamburger');
-        const navLinks = document.getElementById('nav-links');
-
-        hamburger.addEventListener('click', () => {
-            navLinks.classList.toggle('active');
-        });
-    </script>
+    // Hamburger Menu Toggle
+    function toggleMenu() {
+      const navLinks = document.querySelector('.nav-links');
+      navLinks.classList.toggle('active');
+    }
+  </script>
 </body>
 </html>
