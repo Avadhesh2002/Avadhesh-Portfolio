@@ -87,7 +87,6 @@ nav a.active {
   text-decoration: underline;
 }
 
-
 /* Hero Section */
 .hero {
   display: flex;
@@ -485,14 +484,6 @@ nav a.active {
 
 /* Media Queries */
 @media (max-width: 980px) {
-  .hamburger {
-    display: flex;
-  }
-
-  nav ul {
-    display: none;
-  }
-
   .hero {
     flex-direction: column;
     text-align: center;
