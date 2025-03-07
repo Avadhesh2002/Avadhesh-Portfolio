@@ -87,65 +87,6 @@ nav a.active {
   text-decoration: underline;
 }
 
-/* Hamburger Menu */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 5px;
-  z-index: 1000;
-}
-
-.hamburger .line {
-  width: 30px;
-  height: 3px;
-  background-color: var(--text-color);
-  transition: all 0.3s ease;
-}
-
-.hamburger.active .line:nth-child(1) {
-  transform: rotate(45deg) translate(5px, 5px);
-}
-
-.hamburger.active .line:nth-child(2) {
-  opacity: 0;
-}
-
-.hamburger.active .line:nth-child(3) {
-  transform: rotate(-45deg) translate(5px, -5px);
-}
-
-/* Mobile Navigation */
-.mobile-nav {
-  display: none;
-  flex-direction: column;
-  background-color: var(--background-color);
-  backdrop-filter: blur(10px);
-  border-radius: 20px;
-  padding: 20px;
-  box-shadow: 0 0 10px var(--shadow-color);
-  position: absolute;
-  top: 80px;
-  right: 20px;
-  z-index: 999;
-}
-
-.mobile-nav a {
-  color: var(--text-color);
-  text-decoration: none;
-  font-size: 18px;
-  font-weight: bold;
-  padding: 10px 0;
-  transition: color 0.3s ease;
-}
-
-.mobile-nav a:hover {
-  color: var(--primary-color);
-}
-
-.mobile-nav.active {
-  display: flex;
-}
 
 /* Hero Section */
 .hero {
